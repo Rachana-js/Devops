@@ -1,0 +1,29 @@
+pipeline{
+    agent {
+        label 'stage'
+    }
+
+    tools{
+        jdk 'java-11'
+        maven 'maven'
+    }
+    stages{
+       
+        stage('Git Checkout'){
+            steps{
+                git branch: 'main' , url: 'https://github.com/Rachana-js/Veteran.git'
+            }
+        }
+
+        stage('compile'){
+            steps{
+                sh "mvn compile"
+            }
+        }
+        stage('Build'){
+            steps{
+                sh "mvn pacakage"
+            }
+        }
+    }
+}
