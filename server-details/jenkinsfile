@@ -42,5 +42,13 @@ pipeline{
                 '''
             }
         }
+        stage('Diskspace'){
+            steps{
+                sh '''
+                echo "Diskspace details"
+                df -kh
+                '''
+            }
+        }
     }
 }
