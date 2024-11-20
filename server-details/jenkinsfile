@@ -42,7 +42,7 @@ pipeline{
                 '''
             }
         }
-        stage('Diskspace'){
+        stage('Diskspace details'){
             steps{
                 sh '''
                 echo "Diskspace details"
