@@ -3,5 +3,5 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "mybucket"{
-    bucket = "parbucket"
+    bucket = "rachana_microdegree_bucket1234"
 }
